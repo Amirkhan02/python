@@ -3,10 +3,12 @@
 # count_words("The cake is done. It is a big cake!") 
 # --> {"cake":2, "big":1, "is":2, "the":1, "a":1, "it":1}
 
+import string
 def read_file_content(filename):
-    # [assignment] Add your code here 
-    
-    return "Hello World"
+    # [assignment] Add your code here
+    with open(filename) as f:
+         data=f.read().split()
+    return data
 
 
 def count_words():
@@ -27,4 +29,4 @@ def count_words():
                     for key in list(d.keys()):
                         print(key, ":", d[key])
                         print(d)
-    return {"as": 10, "would": 20}
+    
